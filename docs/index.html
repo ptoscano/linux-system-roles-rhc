@@ -59,7 +59,7 @@ SOFTWARE.
   <style type="text/css">code{white-space: pre;}</style>
   <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -70,7 +70,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -272,7 +272,7 @@ playbooks by remediations. It is <code>null</code> by default and will
 use the system host name if not specified.</p>
 <p>Possible values of this variable:</p>
 <ul>
-<li><code>null</code> or an empty value: the ansible host name is not
+<li><code>null</code> or an empty string: the ansible host name is not
 changed.</li>
 <li><code>{state: absent}</code>: the ansible host name is unset in the
 insights-client config file and Host Based Inventory (HBI) is updated to
